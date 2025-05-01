@@ -52,3 +52,63 @@ while (f.hasNextLine()) {
         continue;
     }
 }
+```
+
+### Interactive User Interface
+```java
+do {
+    System.out.println("Enter your instruction:");
+    userValue = userInput.nextLine();
+    if (!userValue.equalsIgnoreCase("quit")) {
+        // Query processing logic...
+    }
+} while (!userValue.equalsIgnoreCase("quit"));
+```
+
+### Object Comparison Implementation
+```java
+public int compareTo(Origin obj) {
+    if (this.count == obj.count) {
+        return this.originName.compareToIgnoreCase(obj.originName);
+    } else {
+        return this.count - obj.count;
+    }
+}
+```
+
+## Sample Output 📋
+```
+Enter one of the following instructions.
+
+REGION total
+REGION from ORIGIN
+REGION all
+quit
+
+Replace REGION with your desired region, and ORIGIN with your desired place of origin (or its substring).
+------
+
+Enter your instruction:
+New York total
+New York: Total foreign born is: 1900001
+
+Enter your instruction:
+Texas from Germany
+Texas: foreign born population
+Germany  48295
+
+Enter your instruction:
+California all
+California: foreign born population
+Austria  11498
+Canada  22118
+...
+```
+
+## Skills Demonstrated 💪
+- **Object-Oriented Design:** Class hierarchy with inheritance and polymorphism
+- **Data Structure Implementation:** Custom collections with specialized behaviors
+- **File I/O Operations:** Reading and parsing complex CSV data
+- **String Processing:** Advanced string manipulation techniques
+- **Input Validation:** Robust error handling and data verification
+- **Interactive Command Processing:** Command parsing and execution logic
